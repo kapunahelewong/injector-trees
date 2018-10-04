@@ -1,0 +1,35 @@
+<hello></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<h2>Can't get lazy service here in root:</h2>
+ <li *ngFor="let item of items">
+  <span >{{item.rank}}</span> {{item.name}}
+  </li>
+  <p>Click on Lazy 1 to see items in service.</p>
+
+<hr />
+
+<h2>Lazy Loading section</h2>
+
+<button routerLink="/lazy1">Lazy 1</button>
+<button routerLink="">Home</button>
+<router-outlet></router-outlet>
+
+<hr />
+
+<h2>Can't get transcluded stuff service</h2>
+<li *ngFor="let stuff of stuff">
+  <span >{{stuff.rank}}</span> {{stuff.name}}
+  </li>
+
+<hr />
+
+<h2>Transclusion</h2>
+
+<app-transclusion [childItem]="parentItem"></app-transclusion>
+
+<h2>Eager</h2>
+
+<app-eager></app-eager>
